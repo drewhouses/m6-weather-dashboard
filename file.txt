@@ -1,0 +1,17 @@
+Need to take in city string and parse it into query string
+query string will be used to request info from weather API
+Before passing city to query string, it will have to be passed
+to geocoding API in order to get coordinates
+WHen passing coordinates I need to get current day weather and 
+next 5 day forecast
+Need to structure and display weahter info in a readable intuitive way
+
+input string will also have to be stored in localStorage and
+saved visually on the webpage in a history section.
+When the past cities strings are clicked on, it will once again display
+that city's weather
+
+
+A loop can create a button for each of the previously entered cities
+
+http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
