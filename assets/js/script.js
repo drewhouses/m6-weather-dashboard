@@ -1,4 +1,4 @@
-// API KEY 0a63de479cdec3863df7cb1f13d35a15
+
 
 var buttonEl = $(".btn");
 var cityFormEl = $("#city");
