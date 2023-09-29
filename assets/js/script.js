@@ -15,7 +15,7 @@ function fetchWeather(coords) {
   var lat = coords[0];
   var lon = coords[1];
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
   )
     .then(function (response) {
       return response.json();
@@ -38,4 +38,8 @@ function cityToCoordinates(city) {
       fetchWeather(coordinates);
     });
   return coordinates;
+}
+
+function displayWeather() {
+  
 }
