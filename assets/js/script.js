@@ -8,12 +8,10 @@ submitFormEl.on("submit", function (event) {
   event.preventDefault();
 
   var city = cityFormEl.val();
-  console.log(`${city} is the city \nSubmitted`);
-  fetchWeather(cityToCoordinates(city));
+  cityToCoordinates(city);
 });
 
 function fetchWeather(coords) {
-  console.log(typeof coords);
   var lat = coords[0];
   var lon = coords[1];
   fetch(
@@ -28,7 +26,6 @@ function fetchWeather(coords) {
 }
 
 function cityToCoordinates(city) {
-  var xy = [];
   fetch(
     `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`
   )
@@ -36,7 +33,9 @@ function cityToCoordinates(city) {
       return response.json();
     })
     .then(function (data) {
-      coordinates = [data[0].lat, data[0].lon];
+      coordinates.push(data[0].lat);
+      coordinates.push(data[0].lon);
+      fetchWeather(coordinates);
     });
   return coordinates;
 }
