@@ -1,5 +1,3 @@
-
-
 var buttonEl = $(".btn");
 var cityFormEl = $("#city");
 var submitFormEl = $("#submit-form");
@@ -18,7 +16,7 @@ submitFormEl.on("submit", function (event) {
 
 function cityToCoordinates(city) {
   fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=0a63de479cdec3863df7cb1f13d35a15`
+    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`
   )
     .then(function (response) {
       return response.json();
@@ -28,4 +26,4 @@ function cityToCoordinates(city) {
     });
 }
 
-//   `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=0a63de479cdec3863df7cb1f13d35a15B`
+//
