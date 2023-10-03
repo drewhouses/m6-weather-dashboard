@@ -3,3 +3,25 @@ header {
     color: white;
     margin-top: 0;
 }
+
+.history-sidebar {
+    width: 200px;
+    border: 1px solid;
+    height: 100vh;
+    float: left;
+
+}
+
+.history-sidebar section:hover {
+    background-color: rgb(107, 224, 240);
+}
+
+
+.form-container {
+    margin-left: 250px;
+    
+}
+
+#weather-container {
+    margin-left: 250px;
+}
