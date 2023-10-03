@@ -38,7 +38,6 @@ function displayCurrentWeather(data) {
     // https://openweathermap.org/weather-conditions
   
   var currentWeatherEl = $(".weather-container");
-  var forecastWeatherEl = $(".forecast-container");
   var currentTemp = data.main.temp;
   var currentHumidity = data.main.humidity;
   var currentHigh = data.main.temp_max;
@@ -55,6 +54,12 @@ function displayForecast() {
   // Do the same as displayCurrentWeather just with the forecast data
   // Need to first see how forecast data comes back from API call
   // Then I can determine how to extract and display it
+
+  // Maybe only save the necessary info in an object or an array
+  // then use for loop to generate a card for each day?
+  // card container will be flexbox, each card can be spread out using
+  // justify-content: spacebetween;
+  var forecastEl = $(".forecast-container");
 }
 
 function cityToCoordinates(city) {
