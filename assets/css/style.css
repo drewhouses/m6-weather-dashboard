@@ -22,6 +22,7 @@ header {
     
 }
 
-#weather-container {
+.weather-container, .forecast-container {
     margin-left: 250px;
+    margin-bottom: 20px;
 }
